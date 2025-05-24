@@ -97,8 +97,21 @@ Linux Administration
 =====================
 User management
 CRUD
-useradd <user-name> --> create user
-id <user-name> --> displays the user info
+useradd <user-name> --> create user we need admin so sudo su do 1st
+id <user-name> --> displays the user infoid vijayl
+output
+uid=1003(vijayl) gid=1003(vijayl) groups=1003(vijayl)
+
+
+cat /etc/group--- shows the groups
+output
+vijayl:x:1003:
+
+cat /etc/passwd --- shows the users
+output
+vijayl:x:1003:1003::/home/vijayl:/bin/bash
+
+
 
 group --> list of similar users
 devops team have 20 members
@@ -111,7 +124,16 @@ primary group and secondary group
 
 groupadd devops --> devops group will be created
 
-usermod -g devops suresh
-usermod -aG testers suresh
+usermod -g devops vijayl
+id vijayl
+output: uid=1003(vijayl) gid=1004(devops) groups=1004(devops)
+
+groupadd tester 
+usermod -aG tester vijayl--->aG append G-secondary group g-primary group
+o/p:
+uid=1003(vijayl) gid=1004(devops) groups=1004(devops),1005(test)
 
 passwd <user-name>
+userdel vijayl --> deletes user not group
+groupdel vijayl --> deletes group 
+and delete directories
