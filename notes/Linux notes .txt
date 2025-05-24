@@ -1,7 +1,8 @@
 /c/devops/daws-84s/daws-84s --> full path
 
 git add . && git commit -m "update" && git push -u origin main
-
+clear
+exit
 
 $ --> normal user
 # --> root/admin/super user
@@ -55,6 +56,6 @@ echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02
 
 log files --> tail -f <log-file>
 
-find <where to search> -name <file-name>
+find <where to search> -name <file-name> -->example find / -name newf --finds the folder from all dir
 
 vim --> visually improved
