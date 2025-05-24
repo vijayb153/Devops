@@ -1,6 +1,7 @@
 /c/devops/daws-84s/daws-84s --> full path
 
-git add . ;git commit -m"update"; git push -u main;
+git add . && git commit -m "update" && git push -u origin main
+
 
 $ --> normal user
 # --> root/admin/super user
