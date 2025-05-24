@@ -137,3 +137,15 @@ passwd <user-name>
 userdel vijayl --> deletes user not group
 groupdel vijayl --> deletes group 
 and delete directories
+
+set passwrd
+------
+sudo passwd vijayl--->ask to set passwrd
+
+we can login with this: check this vim /etc/ssh/sshd_config---
+--# To disable tunneled clear text passwords, change to no here!
+---#PasswordAuthentication yes
+connect: from bash
+ssh vijayl@54.147.183.166
+pwd--->/home/vijayl
+
