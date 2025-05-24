@@ -13,12 +13,15 @@ ls -lr --> long listing format in reverse alphabetical order
 ls -lt --> latest files on top
 ls -ltr --> latest at bottom
 ls -la --> all files including hidden files and folders
+head filename
+head -nx filename --->x is number of line 1st lines
+tail -nx filename --> x is number of line last lines
 
 touch <file-name> --> creates empty file
 
-cat > <file-name> --> type text, enter and ctrl+d
+cat > <file-name> --> type text, enter and ctrl+d get out from
 previous content will be replaced
-cat >> <file-name> --> appends text to previous content
+cat >> <file-name> --> appends text to previous content ctrl+d get out from
 
 
 > --> usually called as redirection
