@@ -148,4 +148,98 @@ we can login with this: check this vim /etc/ssh/sshd_config---
 connect: from bash
 ssh vijayl@54.147.183.166
 pwd--->/home/vijayl
+usermod -a vijayl ec2-user
 
+permissions
+==============
+R -> 4
+W -> 2
+X -> 1
+-			rw-		r--		r--
+file/		user/   group	others
+			owner
+directory     u       g       o
+
+ec2-user     ec2-user
+user		group
+
+chmod ugo+w devops.txt
+chmod 700 devops.txt
+
+chmod 777 tt.txt
+-rwxrwxrwx 1 ec2-user ec2-user  0 May 24 14:53 tt.txt
+
+
+only owner/root user can change the permissions
+
+sudo chown <user>:<group> devops.txt
+
+file ownership can only be modified by root user
+/etc/ssh/sshd_config
+
+how can you give key based access to linux user?
+cd /temp/
+
+ssh-keygen -f sivakumar
+--------------------------
+65,536 ports 0-65,535
+key base access:
+1. create user
+2. sivakumar can send his public key to admin user
+3. /home/sivakumar admin creates .ssh in /home/sivakumar folder
+4. sivakumar is the only owner to this folder... 700
+5. create a file called authorized_keys with max access 600
+6. admin keeps sivakumar public key here.
+7. now sivakumar should be able to login
+port is like flat number
+
+generate key
+ssh-keygen -f vijayk
+from sudo su:
+useradd vijayk
+cd ../vijayk/
+pwd
+mkdir .ssh
+chmod 700 -R .ssh/
+ls -l
+cd .ssh/
+touch autherized_keys
+chmod 600 autherized_keys
+cd ..
+chown vijayk:vijayk -R .ssh/
+cd .ssh/
+
+vim autherized_keys add pub key(got from
+connect from ssh -i vijayk vijayk@35.175.177.152
+
+---------------------------------------
+cd /ssh
+ssh -i <key> ec2-user@IP
+
+/etc/sudoers --> you can do changes to provide root access
+or add user to wheel group without password
+
+package management
+====================
+package manager connects to internet windows website. downloads them and install them
+
+apt-get
+yum/dnf
+
+dnf install <package-name>
+/etc/yum.repos.d
+
+service management
+===================
+systemctl start <service-name>
+systemctl stop <service-name>
+systemctl status <service-name>
+systemctl restart <service-name>
+systemctl enable <service-name>
+systemctl disable <service-name>
+
+install nginx and start it
+
+protocol, port, ip, username and password
+
+http		80  <IP>
