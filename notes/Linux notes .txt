@@ -56,6 +56,10 @@ echo https://raw.githubusercontent.com/daws-84s/notes/refs/heads/main/session-02
 
 log files --> tail -f <log-file>
 
-find <where to search> -name <file-name> -->example find / -name newf --finds the folder from all dir
+find <where to search> -name <file-name> -->example find / -name newf --finds the folder from all dir 
+sudo find / -name "*ne"
+sudo find / -name "*i.txt"
+
+
 
 vim --> visually improved
