@@ -212,12 +212,24 @@ cd .ssh/
 vim autherized_keys add pub key(got from
 connect from ssh -i vijayk vijayk@35.175.177.152
 
----------------------------------------
 cd /ssh
 ssh -i <key> ec2-user@IP
+ 
+---------------------------------------
 
-/etc/sudoers --> you can do changes to provide root access
+root acce to vijayk(User) go to
+vim /etc/sudoers --> you can do changes to provide root access
 or add user to wheel group without password
+
+## Same thing without a password
+# %wheel        ALL=(ALL)       NOPASSWD: ALL -->remove #
+or 
+
+# vijayk      ALL=(ALL)       NOPASSWD: ALL -->remove #
+
+usermod -aG wheel vijayk
+
+
 
 package management
 ====================
@@ -227,6 +239,10 @@ apt-get
 yum/dnf
 
 dnf install <package-name>
+
+dnf list installed
+dnf list available
+
 /etc/yum.repos.d
 
 service management
