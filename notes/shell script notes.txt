@@ -15,5 +15,37 @@ no spacess btw variables
 name="testName"
 arguments:
 name=$1
+read:
+#!bin/bash
+person=vin
+variables arguments
+#!/bin/bash
+PERSON1=$1
+PERSON2=$2
+
+echo "enter your name1"
+read pin
+echo "pin is $pin"
+echo "enter your name2"
+read -s pin2
+echo "$person pin is $pin2"
+
+data typs:
+#!bin/bash
+number1=10
+number2=11
+
+# just commented
+time=$(date)
+echo "enter your time $time"
+
+SUM=$(($number1+$number2))
+echo "sum= $SUM"
+arrays:MOVIES=("ONE" "TWO" "THREE")
+echo "first value of moview:${MOVIES[0]}"
+
+----------------------------------
+special variables in shell
+
 
 
