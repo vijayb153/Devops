@@ -8,4 +8,10 @@ then
 else
     echo "you are with root access"
 fi
-echo "install mysql -y"
+dnf install mysql -y
+
+if [ $? -eq 0 ]
+then 
+    echo "mysql success"
+else
+    echo "installing mysql"
