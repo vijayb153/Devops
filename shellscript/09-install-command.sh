@@ -22,5 +22,4 @@ then
     fi
 else
     echo "msql i already installed ...nothing to do"
-    exit 1
 fi
