@@ -14,4 +14,4 @@ if [ $? -eq 0 ]
 then 
     echo "mysql success"
 else
-    echo "installing mysql"
+    echo "failled instalation mysql"
