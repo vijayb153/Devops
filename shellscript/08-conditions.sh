@@ -12,4 +12,4 @@ else
  echo "given number:{$Number} is morethan than 10"
 
 }
-if
+fi
