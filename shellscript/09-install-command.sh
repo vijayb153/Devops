@@ -8,7 +8,7 @@ then
 else
     echo "you are with root access"
 fi
-dnf install mysql -y
+dnf install mylkjjsql -y
 
 if [ $? -eq 0 ]
 then 
