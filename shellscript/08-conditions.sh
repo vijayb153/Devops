@@ -1,6 +1,5 @@
 #!/bin/bash
-Number=$1
-
+Number=5
 if[ $Number -lt 10 ]
 then
     echo "given number:{$Number} is less than 10"
