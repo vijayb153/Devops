@@ -1,7 +1,7 @@
 #!/bin/bash/
 UESERID=$(id -u)
 
-if [$UESERID -ne 0]
+if [ $UESERID -ne 0 ]
 then
     echo "Error:: pls run as root"
 else
