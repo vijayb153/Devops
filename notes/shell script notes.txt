@@ -1,3 +1,6 @@
+sh <script-name>
+#!/bin/bash --> shebang, it should be the first line in shell script, it is the interpeter to check the syntax and execute the commands..
+
 git clone https://github.com/vijayb153/Devops.git
 cd Devops/
 run script by running this:
@@ -5,6 +8,8 @@ sh shellscript1.sh
 or 
 ./shellscript1.sh ---:-bash: ./shellscript1.sh: Permission denied
 give permission ---->  chmod +x shellscript1.sh
+
+no spacess btw variables
 
 
 
