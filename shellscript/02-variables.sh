@@ -1,7 +1,9 @@
 #!/bin/bash
+PERSON1="VIJJ"
+PERSON2="VINU"
+eco "hello $PERSON1"
+eco "hello $PERSON2"
 
-PERSON1="Alice"
-PERSON2="Bob"
 
 echo "Hello $PERSON1"
 echo "Hello $PERSON2"
