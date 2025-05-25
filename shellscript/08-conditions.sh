@@ -1,5 +1,5 @@
 #!/bin/bash
-Number=5
+Number=$1
 
 if [ $Number -lt 10 ]
 then
