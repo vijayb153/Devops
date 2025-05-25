@@ -1,5 +1,7 @@
 sh <script-name>
 #!/bin/bash --> shebang, it should be the first line in shell script, it is the interpeter to check the syntax and execute the commands..
+in 1t line its shebang, 
+next lines it will be comment
 
 git clone https://github.com/vijayb153/Devops.git
 cd Devops/
