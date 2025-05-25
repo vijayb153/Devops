@@ -15,3 +15,4 @@ then
     echo "mysql success"
 else
     echo "failled instalation mysql"
+fi
