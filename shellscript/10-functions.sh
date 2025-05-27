@@ -1,7 +1,7 @@
 #!/bin/bash/
 UESERID=$(id -u)
-install $UESERID "mysql"
-install(){
+install2 $UESERID "mysql"
+install2(){
 if [ $1 -ne 0 ]
 then
     echo "Error:: pls run as root"
