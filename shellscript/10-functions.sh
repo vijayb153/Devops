@@ -2,7 +2,7 @@
 UESERID=$(id -u)
 install $UESERID $1
 install(){
-if [ $$4 -ne 0 ]
+if [ $2 -ne 0 ]
 then
     echo "Error:: pls run as root"
     exit 1
