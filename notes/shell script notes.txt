@@ -96,6 +96,31 @@ sleep 10 &
 echo "PID of last command in background: $!"
 $?----exit status 0-127   0--is success
 
+------------------------
+function
+AVALIDATE (){
+    if [ $1 -eq 0 ]
+    then 
+        echo "$2 success"
+    else
+        echo "failled instalation $2"
+        exit 1
+    fi
+}
+AVALIDATE $? $2 --------calling that function
+---------------------------------
+colurs in shell
+30 black
+31 red
+32 green
+33 yellow
+34 blue
+35 magenta
+cyan 36
+white 37 or 0
+syntex echo -e "\e[31m hell vijay"
+
+
 
 
 
