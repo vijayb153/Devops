@@ -28,4 +28,6 @@ AVALIDATE (){
 }
 }
 
-install2 "$USERID" "mysql"
+# install2 "$USERID" "mysql"
+
+install2 "$USERID" $1
