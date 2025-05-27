@@ -1,42 +1,56 @@
-#!/bin/bash/
-UESERID=$(id -u)
+#!/bin/bash
+
+USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
-B="\e[34m"
 Y="\e[33m"
 N="\e[0m"
 
-install2()
-{
-if [ $1 -ne 0 ]
+if [ $USERID -ne 0 ]
 then
-    echo -e "$R Error:: pls run as root $N"
-    exit 1
+    echo -e "$R ERROR:: Please run this script with root access $N"
+    exit 1 #give other than 0 upto 127
 else
-    echo -e "$Y you are with root access $N"
-fi
-dnf list installed $2
-if [ $? -ne 0 ]
-then 
-    echo -e "$Y mysql not $B installed installing $N"
-    dnf install $2 -y
-    AVALIDATE $? $2
-else
-    echo "$2 i already installed ...nothing to do"
+    echo "You are running with root access"
 fi
 
-AVALIDATE ()
-    {
+# validate functions takes input as exit status, what command they tried to install
+VALIDATE(){
     if [ $1 -eq 0 ]
-    then 
-        echo "$2 success"
+    then
+        echo -e "Installing $2 is ... $G SUCCESS $N"
     else
-        echo "failled instalation $2"
+        echo -e "Installing $2 is ... $R FAILURE $N"
         exit 1
     fi
-    }
 }
 
-# install2 "$USERID" "mysql"
+dnf list installed mysql
+if [ $? -ne 0 ]
+then
+    echo "MySQL is not installed... going to install it"
+    dnf install mysql -y
+    VALIDATE $? "MySQL"
+else
+    echo -e "Nothing to do MySQL... $Y already installed $N"
+fi
 
-install2 "$USERID" $1
+dnf list installed python3
+if [ $? -ne 0 ]
+then
+    echo "python3 is not installed... going to install it"
+    dnf install python3 -y
+    VALIDATE $? "python3"
+else
+    echo -e "Nothing to do python... $Y already installed $N"
+fi
+
+dnf list installed nginx
+if [ $? -ne 0 ]
+then
+    echo "nginx is not installed... going to install it"
+    dnf install nginx -y
+    VALIDATE $? "nginx"
+else
+    echo -e "Nothing to do nginx... $Y already installed $N"
+fi
