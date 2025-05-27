@@ -13,7 +13,7 @@ if [ $? -ne 0 ]
 then 
     echo "mysql not installed installing"
     dnf install $2 -y
-    AVALIDATE $? "$2"
+    AVALIDATE $? $2
 else
     echo "$2 i already installed ...nothing to do"
 fi
