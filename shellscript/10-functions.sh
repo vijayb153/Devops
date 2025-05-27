@@ -1,6 +1,6 @@
 #!/bin/bash/
 UESERID=$(id -u)
-install2 $UESERID "mysql"
+install2 "$USERID" "mysql"
 install2(){
 if [ $1 -ne 0 ]
 then
