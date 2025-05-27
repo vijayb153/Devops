@@ -18,11 +18,11 @@ else
     echo "$1 i already installed ...nothing to do"
 fi
 AVALIDATE (){
-    if [ $1 -eq 0 ]
+    if [ $2 -eq 0 ]
     then 
-        echo "$2 success"
+        echo "$3 success"
     else
-        echo "failled instalation $2"
+        echo "failled instalation $3"
         exit 1
     fi
 }
