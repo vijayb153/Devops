@@ -1,3 +1,7 @@
+sudo dnf remove nginx -y
+sudo dnf install nginx -y
+
+
 sh <script-name>
 #!/bin/bash --> shebang, it should be the first line in shell script, it is the interpeter to check the syntax and execute the commands..
 in 1t line its shebang, 
