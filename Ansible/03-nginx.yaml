@@ -7,4 +7,4 @@
     ansible.builtin.package:
       name: nginx
       state: present
-  when: state == "disabled"
+    when: state == "disabled"
