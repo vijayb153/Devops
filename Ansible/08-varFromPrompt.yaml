@@ -4,6 +4,7 @@
   vars_prompt:
   - name: name
     prompt: pls enter name
+    enabled: false
   - name: password
     prompt: pls enter password
   tasks:
