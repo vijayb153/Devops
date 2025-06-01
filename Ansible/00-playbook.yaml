@@ -2,6 +2,6 @@
   hosts: local
   tasks: #list of tasks
   - name: ping server
-    ansible.debug.ping:
+  ansible.builtin.ping:
 
   
