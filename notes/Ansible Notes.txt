@@ -25,3 +25,23 @@ ansible all -i 172.31.93.25, -e ansible_user=ec2-user -e ansible_password=DevOps
 ansible all -i 172.31.93.25, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
 
 shell script == anssible playbook
+
+to run play book
+ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 00-playbook.yaml
+file: 00-playbook.yaml have
+- name: ping server
+  hosts: local
+  tasks: #list of tasks
+  - name: ping server
+    ansible.builtin.ping: --> ping i module
+output:
+PLAY [ping server] **********************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************
+ok: [172.31.93.25]
+
+TASK [ping server] **********************************************************************************************************************
+ok: [172.31.93.25]
+
+PLAY RECAP ******************************************************************************************************************************
+172.31.93.25    
