@@ -1,0 +1,5 @@
+remote loging
+from one machine
+ssh ec2-user@ip(remote) 'echo "hello world" > /tmp/ansible.txt' 
+and enter 
+give password   --> it will add the file with dat to remote server
