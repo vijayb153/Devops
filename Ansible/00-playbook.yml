@@ -1,0 +1,7 @@
+- name: ping server
+  hosts: local
+  tasks: #list of tasks
+  - name: ping server
+    ansible.debug.ping:
+
+  
